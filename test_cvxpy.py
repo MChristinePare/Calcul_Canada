@@ -1,7 +1,7 @@
 import numpy as np 
 import cvxpy as cp 
-import random 
-import pdb 
+#import random 
+#import pdb 
 
 def layer(inputs, seq_length): 
 
@@ -60,7 +60,6 @@ for t in range(15):
 obj=0
 
 prob=cp.Problem(cp.Minimize(obj),constraints)    
-prob.solve(solver="MOSEK", verbose=True)
+prob.solve(solver="GUROBI", verbose=True)
 
-pdb.set_trace()
 
